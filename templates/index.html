@@ -1,0 +1,43 @@
+{% extends "base_public.html" %}
+
+{% block title %}
+Home
+{% endblock %}
+
+{% block content %}
+
+<div style="text-align:center; margin-top:30px;">
+
+    <img
+    src="{{ url_for('static', filename='images/logo.jpg') }}"
+    width="180">
+
+    <h1>
+        Lead City University Library E-Card System
+    </h1>
+
+    <p>
+        Welcome to the Library E-Card Management System
+    </p>
+
+    <br>
+
+    <a class="hero-btn" href="/register">
+        Student Registration
+    </a>
+
+    <br><br>
+
+    <a class="hero-btn" href="/login">
+        Student Login
+    </a>
+
+    <br><br>
+
+    <a class="hero-btn" href="/admin/login">
+        Admin Login
+    </a>
+
+</div>
+
+{% endblock %}

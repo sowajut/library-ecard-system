@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Library Card Verification</title>
+
+    <style>
+
+        body{
+            font-family:Arial, sans-serif;
+            background:#f0f2f5;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            height:100vh;
+        }
+
+        .verification-card{
+            width:400px;
+            background:white;
+            border-radius:15px;
+            box-shadow:0px 4px 15px rgba(0,0,0,0.2);
+            padding:20px;
+            text-align:center;
+        }
+
+        .verified{
+            color:green;
+            font-size:24px;
+            font-weight:bold;
+            margin-bottom:20px;
+        }
+
+        .passport{
+            width:140px;
+            height:160px;
+            object-fit:cover;
+            border-radius:10px;
+            border:3px solid green;
+        }
+
+        .details{
+            text-align:left;
+            margin-top:20px;
+        }
+
+        .details p{
+            margin:8px 0;
+        }
+
+        .card-number{
+            background:#f4f4f4;
+            padding:10px;
+            border-radius:8px;
+            margin-top:15px;
+            font-weight:bold;
+        }
+
+        .status{
+            margin-top:15px;
+            color:green;
+            font-weight:bold;
+            font-size:18px;
+        }
+
+    </style>
+
+</head>
+<body>
+
+<div class="verification-card">
+
+    <img
+        src="{{ url_for('static', filename='images/logo.jpg') }}"
+        width="80"
+        alt="Lead City Logo">
+
+    <div class="verified">
+        ✅ VALID LIBRARY CARD
+    </div>
+
+    <img
+    class="passport"
+    src="{{ url_for('static', filename='uploads/' + student[9]) }}"
+    alt="Passport">
+
+    <div class="card-number">
+        {{ student[10] }}
+    </div>
+
+    <div class="details">
+
+        <p><strong>Surname:</strong> {{ student[1] }}</p>
+
+        <p><strong>Other Names:</strong> {{ student[2] }}</p>
+
+        <p><strong>Faculty:</strong> {{ student[3] }}</p>
+
+        <p><strong>Department:</strong> {{ student[4] }}</p>
+
+        <p><strong>Matric Number:</strong> {{ student[6] }}</p>
+
+    </div>
+
+    <div class="status">
+        VERIFIED
+    </div>
+
+</div>
+
+</body>
+</html>

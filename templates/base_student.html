@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}{% endblock %}</title>
+
+    <style>
+
+        body{
+            font-family:Arial, sans-serif;
+            margin:0;
+            background:#f4f6f9;
+        }
+
+        .navbar{
+            background:#003366;
+            padding:15px;
+        }
+
+        .navbar a{
+            color:white;
+            text-decoration:none;
+            margin-right:20px;
+            font-weight:bold;
+        }
+
+        .container{
+            padding:20px;
+        }
+
+    </style>
+
+</head>
+<body>
+
+<div class="navbar">
+
+    <a href="/">Home</a>
+
+    <a href="/dashboard">Dashboard</a>
+
+    <a href="/my_card">My E-Card</a>
+
+    <a href="/logout">Logout</a>
+
+</div>
+
+<div class="container">
+
+    {% block content %}
+    {% endblock %}
+
+</div>
+
+</body>
+</html>
